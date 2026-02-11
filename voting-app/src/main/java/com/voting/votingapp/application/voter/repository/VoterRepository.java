@@ -8,10 +8,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 public interface VoterRepository extends JpaRepository<Voter, Long> {
-    Voter findByEmail(String email);
+  Voter findByEmail(String email);
 
-    @Modifying
-    @Transactional
-    @Query("UPDATE Voter v SET v.blocked = :blocked WHERE v.email = :email")
-    int blockByEmail(@Param("email") String email, @Param("blocked") Boolean blocked);
+  @Modifying
+  @Transactional
+  @Query("UPDATE Voter v SET v.blocked = :blocked WHERE v.email = :email")
+  int blockByEmail(@Param("email") String email, @Param("blocked") Boolean blocked);
 }

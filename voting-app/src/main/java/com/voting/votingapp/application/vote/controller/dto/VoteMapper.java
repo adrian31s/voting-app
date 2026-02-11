@@ -8,7 +8,7 @@ import org.mapstruct.ReportingPolicy;
 
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface VoteMapper {
-    @Mapping(target = "voterEmail", source = "vote.voter.email")
-    @Mapping(target = "optionName", source = "vote.option.name")
-    VoteDto toDto(Vote vote);
+  @Mapping(target = "voterEmail", source = "vote.voter.email")
+  @Mapping(target = "optionName", source = "vote.option.name")
+  VoteDto toDto(Vote vote);
 }
