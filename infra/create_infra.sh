@@ -94,7 +94,3 @@ while [ "$(kubectl get po -l app.kubernetes.io/instance=voting -n voting | awk '
 done    
 
 kubectl apply -f traefik/voting-traefik-ingress.yaml
-
-
-
-#http://localhost:81/auth/realms/voting-app/protocol/openid-connect/auth?client_id=voting-app&response_type=code&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fvoting-service%2Fswagger-ui%2Findex.html

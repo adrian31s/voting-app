@@ -9,8 +9,6 @@ Skrypt tworzy lokalny klaster Kubernetes (kind), instaluje Traefik, PostgreSQL, 
 - kubectl
 - Helm
 
-kind load docker-image voting-app:latest --name one-node-cluster
-
 ## Uruchamianie (z katalogu infra)
 
 ```bash
@@ -61,7 +59,7 @@ kubectl logs <pod-name> -n voting
 ```
 
 - Jeżeli skrypt utknie w pętli "waiting for ... pod to be ready", sprawdź logi powyżej i upewnij się, że obrazy zostały poprawnie załadowane do klastra (polecenie 
-`docker pull adrian31s/test-voting-app-repo:1.0.0 && kind load docker-image adrian31s/test-voting-app-repo:1.0.0 --name one-node-cluster`).
+`docker pull adrian31s/test-voting-app-repo:1.0.1 && kind load docker-image adrian31s/test-voting-app-repo:1.0.1 --name one-node-cluster`).
 
 ## Pliki istotne dla tego procesu
 

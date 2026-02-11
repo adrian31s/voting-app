@@ -10,18 +10,19 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @OpenAPIDefinition(
-        security = @SecurityRequirement(name = "bearerAuth"),
-        info = @Info(
-                title = "voting service external REST API",
-                description = "Voting backend service OpenApi documentation",
-                version = "1.0.0"),
-        servers = @Server(url = "http://localhost:81/voting-service/", description = "voting backend service in local environment")
-)
+    security = @SecurityRequirement(name = "bearerAuth"),
+    info =
+        @Info(
+            title = "voting service external REST API",
+            description = "Voting backend service OpenApi documentation",
+            version = "1.0.0"),
+    servers =
+        @Server(
+            url = "http://localhost:81/voting-service/",
+            description = "voting backend service in local environment"))
 @SecurityScheme(
-        name = "bearerAuth",
-        type = SecuritySchemeType.HTTP,
-        scheme = "bearer",
-        bearerFormat = "JWT"
-)
-public class OpenApiSecurityConfig {
-}
+    name = "bearerAuth",
+    type = SecuritySchemeType.HTTP,
+    scheme = "bearer",
+    bearerFormat = "JWT")
+public class OpenApiSecurityConfig {}
