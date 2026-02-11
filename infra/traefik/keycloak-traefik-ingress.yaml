@@ -1,0 +1,26 @@
+  apiVersion: traefik.io/v1alpha1
+  kind: IngressRoute
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: keycloak
+      meta.helm.sh/release-namespace: voting
+    generation: 1
+    labels:
+      app.kubernetes.io/instance: keycloak
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keycloak
+    name: keycloak
+    namespace: voting
+  spec:
+    entryPoints:
+    - web
+    routes:
+    - kind: Rule
+      match: PathPrefix(`/auth`)
+      services:
+      - kind: Service
+        name: keycloak
+        namespace: voting
+        passHostHeader: true
+        port: 80
+

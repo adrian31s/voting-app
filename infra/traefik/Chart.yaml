@@ -1,0 +1,28 @@
+annotations:
+  artifacthub.io/changes: |
+    - "fix(chart): allow to be used as optional subchart"
+    - "feat(hub): add multi-cluster support"
+    - "feat(CRDs): support Traefik Hub v3.20.0-ea.1"
+    - "chore(release): publish traefik 39.1.0-ea.1"
+apiVersion: v2
+appVersion: v3.6.7
+description: A Traefik based Kubernetes ingress controller
+home: https://traefik.io/
+icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+keywords:
+- traefik
+- ingress
+- networking
+kubeVersion: '>=1.22.0-0'
+maintainers:
+- email: michel.loiseleur@traefik.io
+  name: mloiseleur
+- email: remi.buisson@traefik.io
+  name: darkweaver87
+- name: jnoordsij
+name: traefik
+sources:
+- https://github.com/traefik/traefik-helm-chart
+- https://github.com/traefik/traefik
+type: application
+version: 39.1.0-ea.1
