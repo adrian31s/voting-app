@@ -30,7 +30,7 @@ haslo: pass
 zostaniemy przekierowani na strone swaggera gdzie mozemy uzywac aplikacji
 
 token uwierzytelniajacy dostaniemy uzupelniajac odpowiedni username oraz password, przyklad dla admina: 
-(zmien na raw przy copy-paste)
+(zmien widok tego pliku na raw przy copy-paste)
 
 curl -X POST "http://localhost:81/auth/realms/voting-app/protocol/openid-connect/token" \
   -H "Content-Type: application/x-www-form-urlencoded" \
