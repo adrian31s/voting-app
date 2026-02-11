@@ -11,10 +11,10 @@ Skrypt tworzy lokalny klaster Kubernetes (kind), instaluje Traefik, PostgreSQL, 
 
 kind load docker-image voting-app:latest --name one-node-cluster
 
-## Uruchamianie
+## Uruchamianie (z katalogu infra)
 
 ```bash
-sh infra/create_infra.sh
+./reate_infra.sh
 ```
 
 Skrypt wykonuje kolejno wszystkie kroki instalacyjne i czeka na to, aż główne pody będą uruchomione. W zaleznosci od szybkosci internetu, może to potrwać kilka minut. (dla przyspieszenia wyłączone są probes dla k8s)

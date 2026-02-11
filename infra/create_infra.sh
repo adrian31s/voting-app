@@ -46,7 +46,6 @@ while [ "$(kubectl get nodes | awk 'NR>1{print $2}')" != "Ready" ]; do
     sleep 1
 done
 
-kind load docker-image voting-app:latest --name one-node-cluster
 
 kubectl delete namespace voting
 kubectl create namespace voting

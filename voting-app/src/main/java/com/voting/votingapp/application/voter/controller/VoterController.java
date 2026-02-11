@@ -49,14 +49,9 @@ public class VoterController {
                     description = "Forbidden")
             ,
             @ApiResponse(
-                    responseCode = "404",
-                    description = "Not Found",
-                    content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Character.class))
-            ),
-            @ApiResponse(
                     responseCode = "500",
                     description = "Internal Server Error",
-                    content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Character.class))
+                    content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = RestErrorDto.class))
             )
     })
 
